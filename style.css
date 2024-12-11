@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+*{
+    font-family: 'Quicksand', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none; /*konturas nonem*/
+    border: none; /*nonem apmales*/
+    text-decoration: none; /*nonem pasvītrojumus*/
+    transition: all .3s;
+    scroll-behavior: smooth; /* mēreni pāriet uz nākamo lapu*/
+}
+
+:root{ /* šeit iespējams definēt css mainīgos*/
+    --maincolor: #f57266;
+}
+
+*::selection{ /* atlasīšanas krāsa, kad atlasa tekstu, lai kopētu. parasti zilā krāsā*/
+    background: var(--maincolor);
+    color: #fff;
+}
+
+html::-webkit-scrollbar{
+    width: 1rem; /* 1rem = 16px*/
+}
+
+html::-webkit-scrollbar-track{ 
+    background-color: #555; /* nomaina krāsu scroll panelim*/
+}
+
+html::-webkit-scrollbar-thumb{
+    background-color: var(--maincolor); /* nomaina krāsu skrullim*/
+    border-radius: 5px; /* noapaļotas malas scrollerim*/
+}
+
+body{
+    background-color: #f5f5f5;
+}
+
+section{
+    min-height: 50vh; /* veiwport height ir 50*/
+    padding: 8rem 7% 3rem;
+}
+
+header{
+    width: 100%;
+    background: #fff;
+    border-bottom: .1rem solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    padding: 2.5rem 7%;
+}
+header .logo{
+    font-size: 2rem;
+    font-weight: 600;
+    color: #555
+}
+header img{
+    height: 2rem;
+}
+header ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+header ul li{
+    margin-left: 2.5rem;
+}
+header ul li a{
+    font-size: 1.3 rem;
+    color: #333;
+}
+header ul li a:hover{
+    color: var(--maincolor);
+    border-bottom: .2rem solid var(--maincolor);
+    padding: 1rem 0;
+}
+
+#sakums, #pakalpojumi .box-container, #izstrade, #ieguvumi, #prasmes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.image{
+    flex: 1 1 20rem;
+}
+
+#sakums img, #izstrade img, #ieguvumi img, #prasmes img{
+    width: 100%; /*pusi iedod bildei un otru pusi konteinerim*/
+}
+
+.content{
+    flex: 1 1 30rem;
+}
+
+span{
+    color: var(--maincolor);
+    font-size: 2rem;
+}
+
+#sakums h1{
+    color: #555;
+    font-size: 2.5rem;
+}
+
+#sakums p{
+    color: #888;
+    font-size: 1.2rem;
+    padding: 1rem 0;
+}
+
+.btn{ /*poga*/
+    display: inline-block;
+    background: var(--maincolor);
+    color: #fff;
+    padding: 1rem 3rem;
+    margin-top: 1rem;
+    border-radius: 1rem;
+    font-size: 1.3rem;
+}
+
+.btn:hover{
+    background: #333;
+}
+
+#pakalpojumi h2{
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 2rem;
+}
+
+#pakalpojumi .box{
+    background-color: #fff;
+    border: .1rem solid rgba(0,0,0,10%);
+    margin: 1rem;
+    padding: 2rem;
+    width: 24rem;
+    border-radius: .5rem;
+    text-align: center;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,10%); /* (ēna) X Y blur color*/
+}
+
+#pakalpojumi .box:hover img{
+    transform: scale(1.2);
+}
+
+#pakalpojumi .box img{
+    width: 7rem;
+    height: 7rem;
+}
+
+#pakalpojumi .box h3{
+    font-size: 1.4rem;
+    color: #666;
+    padding: 1rem 0;
+}
+
+#izstrade, #ieguvumi, #prasmes{
+    background: #222;
+}
+
+#izstrade h2, #ieguvumi h2, #prasmes h2{
+    color: #fff;
+    text-align: left;
+    padding: 1rem 0;
+    font-size: 2rem;
+}
+
+#izstrade ul li, #ieguvumi ul li, #prasmes ul li{
+    color: #eee;
+    margin-left: 2rem;
+    font-size: 1.3rem;
+    padding: .5rem 0;
+}
+
+#prasmes {
+    flex-direction: row-reverse; /* Novieto attēlu labajā pusē */
+}
+
+footer{
+    position: relative;
+    background-color: #333; 
+    color: #8d8a8d; 
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+footer h3{
+    color: #eee;
+    padding-bottom: 20px;
+}
+
+.footeracontent{
+    flex: 1;
+    margin: 20px;
+    min-width: 200px;
+    padding-bottom: 10px;
+}
+
+.footeracontent .image2{
+    float: left;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.footeracontent ul li{
+    padding-bottom: 8px;
+    list-style-type: none;
+}
+
+footer a{
+    color: #8d8a8d; 
+    text-decoration: none;
+}
+
+footer .pirmietrislogo i{
+    color: var(--maincolor);
+}
+
+footer .pirmietrislogo p{
+    padding: 10px;
+}
+
+footer .parejietrislogo i:hover{
+    color: var(--maincolor);
+}
+
+footer .parejietrislogo{
+    padding-top: 10px;
+}
+
+footer .parejietrislogo i{
+    padding: 3px 15px;
+    border: 1px solid #555;
+    border-radius: .8rem;
+    color: #ddd;
+}
+
+footer a:hover{
+    color: var(--maincolor);
+    text-decoration: underline; 
+}
+
+.copyright{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #eee;
+    width: 100%;
+}
+
+#menu{
+    font-size: 2rem;
+    color: #333;
+    cursor: pointer;
+    display: none;
+}
+
+#menu:hover{
+    color: var(--maincolor);
+}
+
+@media(max-width: 1470px){
+    html{
+        font-size: 80%;
+    }
+}
+
+@media(max-width: 860px){
+    #menu{
+        display: block;
+    }
+
+    nav{
+        position: fixed;
+        top: 7.5rem;
+        left: -100%; /* paslepta kreisaja mala*/
+        width: 100%;
+        height: 100%;
+        background: #eee;
+        border-top: .2rem solid rgba(0, 0, 0, 10%);
+    }
+
+    .nav-toggle{
+        left: 0;
+    }
+
+    nav ul{
+        flex-flow: column;
+        padding: 2rem;
+    }
+
+    nav ul li{
+        width: 100%;
+        text-align: center;
+        margin: 1rem 0;
+    }
+
+    nav ul li a{
+        display: block;
+        background: #ddd;
+        padding: 1rem 0;
+        color: #333;
+        border-radius: 1rem;
+    }
+
+    nav ul li a:hover{
+        background: var(--maincolor);
+        color: #fff;
+        border: none;
+    }
+}
+
+@media(max-width: 756px){
+    #ieguvumi{
+        flex-direction: column-reverse;
+    }
+
+    #izstrades, #ieguvumi{
+        padding: 3rem 7% 0;
+    }
+
+    .content{
+        flex: auto;
+    }
+
+    #sakums .content{
+        text-align: center;
+    }
+}
+
+@media(max-width: 600px){
+    footer{
+        flex-direction: column;
+        text-align: center;
+    }
+}
